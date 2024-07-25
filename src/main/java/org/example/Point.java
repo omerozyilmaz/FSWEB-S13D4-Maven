@@ -24,11 +24,11 @@ public class Point {
     public double distance(){
         return Math.sqrt(x*x+y*y);
     }
-    public double distance(Point p) {
-        return Math.sqrt((p.getX() - this.x) * (p.getX() - this.x) + (p.getY() - this.y) * (p.getY() - this.y));
-    }
-
     public double distance(int a, int b) {
         return Math.sqrt((a - this.x) * (a - this.x) + (b - this.y) * (b - this.y));
+    }
+
+    public double distance(Point p) {
+        return distance(p.getX(), p.getY());
     }
 }
